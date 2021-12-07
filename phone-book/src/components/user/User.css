@@ -1,0 +1,9 @@
+.user{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.user span:nth-child(1){
+    color: red;
+}
