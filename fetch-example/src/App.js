@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [numOfFlights, SetNumOfFlights] = useState(5)
+  
   const [fligths, SetFligths] = useState({
     fields: [],
     records: []
