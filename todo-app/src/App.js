@@ -35,7 +35,7 @@ const App = () => {
     if(todo){
       todo.isDone = true;
       SetDoneTodos((prevTodos) => [...prevTodos, todo]);
-      SetTodos(() => todos.filter(item=>item.id !== id))
+      SetTodos(() => todos.filter(item=>item.id !== id));
     }
     else{
       doneTodo.isDone = false;
@@ -65,3 +65,8 @@ const App = () => {
 }
 
 export default App;
+
+
+
+
+
