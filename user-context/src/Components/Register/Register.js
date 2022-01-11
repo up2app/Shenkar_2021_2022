@@ -1,7 +1,6 @@
 import { useState, useContext } from "react";
 import { UserContext } from "../../Context/UsersContext";
 
-
 export default function Register() {
 
     //using the context providers

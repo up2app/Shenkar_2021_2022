@@ -7,6 +7,7 @@ export default function UserContextProvider(props) {
 
     //create the users empty array for the system + create a function that can change the users array 
     const [users, SetUsers] = useState([]);
+    const [currentUser, SetCurrentUser] = useState(null);
 
     const AddUser = (newUser) => {
         //check if email already exists in the array
@@ -18,8 +19,9 @@ export default function UserContextProvider(props) {
     }
 
     const FindUser = (email, password) => {
-        //search and return the user with the same credentials
-        return users.find(user => user.email === email && user.password === password)
+        //search and save the user with the same credentials
+        let u =  users.find(user => user.email === email && user.password === password);
+        SetCurrentUser(u);
     }
 
     ////remove the user and add him at the last index
@@ -37,10 +39,11 @@ export default function UserContextProvider(props) {
         })
 
         SetUsers(allUsers);
+        SetCurrentUser(userToUpdate);
     }
 
     return (
-        <UserContext.Provider value={{ users, AddUser, FindUser, EditUser }}>
+        <UserContext.Provider value={{ users, AddUser, FindUser, EditUser, currentUser }}>
             {props.children}
         </UserContext.Provider>
     )

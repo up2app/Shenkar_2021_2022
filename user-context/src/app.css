@@ -1,0 +1,16 @@
+.flex-container {
+  display: flex;
+}
+.flex-col {
+  flex-direction: row;
+}
+.flex-row {
+  flex-direction: column;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+[readonly]{
+  background-color: #888;
+  cursor: not-allowed;
+}
