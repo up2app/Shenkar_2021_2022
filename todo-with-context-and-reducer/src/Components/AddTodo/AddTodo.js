@@ -17,7 +17,7 @@ export default function AddTodo() {
         <div>
             <form onSubmit={SendTodo}>
                 <legend>Todo Name:</legend>
-                <input type="text" value={name} onChange={(event) => SetName(event.target.value)} />
+                <input type="text" value={name} onChange={(event) => SetName(event.target.value)} placeholder='name'/>
             </form>
         </div>
     )
